@@ -25,7 +25,7 @@ export default function Next() {
         </p>
 
         <div className={styles.grid}>
-x          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
