@@ -6,7 +6,7 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/bin/sudoers',
+        source: '/sudoers',
         destination: 'https://raw.githubusercontent.com/j5pu/sudoers/main/install',
         permanent: true,
       },
