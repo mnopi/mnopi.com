@@ -31,7 +31,6 @@
     <plugin id="man-page-viewer" />
     <plugin id="mobi.hsz.idea.gitignore" />
     <plugin id="name.kropp.intellij.makefile" />
-    <plugin id="net.ashald.envfile" />
     <plugin id="net.bjonnh.intellij.filepermissionsplugin" />
     <plugin id="net.seesharpsoft.intellij.plugins.file-preview" />
     <plugin id="org.asciidoctor.intellij.asciidoc" />
