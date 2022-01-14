@@ -1,9 +1,11 @@
+// noinspection JSUnusedGlobalSymbols,Annotator
+
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from "next/link"
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 
-function Home() {
+export default function Next() {
+  // noinspection HtmlUnknownTarget
   return (
     <div className={styles.container}>
       <Head>
@@ -23,9 +25,7 @@ function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/next"><a>Next.js!</a></Link>
-
-          <a href="https://nextjs.org/docs" className={styles.card}>
+x          <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
@@ -70,5 +70,3 @@ function Home() {
     </div>
   )
 }
-
-export default Home
