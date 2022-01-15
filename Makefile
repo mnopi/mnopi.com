@@ -7,7 +7,10 @@ dev:
 	@npx browserslist@latest --update-db -y --quiet
 	@npm run dev
 
-build:
+lint:
+	@npm run lint
+
+build: lint
 	@npm run build
 
 start: build
