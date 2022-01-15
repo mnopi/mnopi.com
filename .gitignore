@@ -1,4 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 ### macOS template
 # General
 #.DS_Store
@@ -29,7 +28,7 @@ Temporary Items
 
 ### Next/Vercel template
 # dependencies
-/node_modules
+node_modules
 /.pnp
 .pnp.js
 
@@ -60,6 +59,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+dist
+examples
+packages
+
 
 ### Linux template
 # temporary files which can be created if a process still has a handle open of a deleted file

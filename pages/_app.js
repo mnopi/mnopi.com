@@ -1,9 +1,10 @@
-// noinspection Annotator,JSUnusedGlobalSymbols
+import 'nextra-theme-docs/style.css'
+import Prism from 'prism-react-renderer/prism'
 
-import '../styles/globals.css'
+(typeof global !== "undefined" ? global : window).Prism = Prism
 
-function MyApp({ Component, pageProps }) {
+require("prismjs/components/prism-bash")
+
+export default function Mnopi({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
-
-export default MyApp
