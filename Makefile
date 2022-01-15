@@ -1,5 +1,7 @@
 .PHONY: install
 
+export CHROME_PATH := '/Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta'
+
 install:
 	@yarn install
 
@@ -18,4 +20,4 @@ start: build
 
 performance: build
 	@git all
-	@lighthouse https://mnopi.com
+	@npm run performance
