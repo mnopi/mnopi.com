@@ -1,7 +1,5 @@
 .PHONY: install
 
-export CHROME_PATH := '/Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta'
-
 install:
 	@yarn install
 
@@ -20,4 +18,4 @@ start: build
 
 performance: build
 	@git all
-	@npm run performance
+	@CHROME_PATH='/Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta' npm run performance
