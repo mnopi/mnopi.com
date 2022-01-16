@@ -17,16 +17,16 @@ async function request(owner = process.env.VERCEL_GIT_REPO_OWNER, repo){
 }
 
 export default async function handler(req, res) {
-  const response = await request(req.query.owner, req.query.repo)
+  // const response = await request(req.query.owner, req.query.repo)
   await request(req.query.owner, req.query.repo)
-  // .then(function (response){
-  //   res.status(response.status).end(response.data[req.query.data])
-  // })
-  // .catch(function (response) {
-  //   res.status(response.status).json(response.headers)
-  // });
-  console.log(response)
-  res.status(200).json({ value: `${req.query.owner}/${req.query.repo}`,
-    description: response.data[req.query.data] })
+  .then(function (response){
+    res.status(response.status).end(response.data[req.query.data])
+  })
+  .catch(function (response) {
+    res.status(response.status).json(response.headers)
+  });
+  // console.log(response)
+  // res.status(200).json({ value: `${req.query.owner}/${req.query.repo}`,
+  //   description: response.data[req.query.data] })
 }
 // TODO: User, default values
