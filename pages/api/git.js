@@ -2,5 +2,5 @@
 // noinspection JSUnusedGlobalSymbols,Annotator
 
 export default function handler(req, res) {
-  res.status(200).json({ name: process.env.API_URL })
+  res.status(200).json({ token: process.env.TOKEN })
 }

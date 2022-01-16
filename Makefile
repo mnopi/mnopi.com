@@ -19,3 +19,7 @@ start: build
 performance: build
 	@git all
 	@CHROME_PATH='/Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta' npm run performance
+
+api:
+	@git all
+	@curl -fsL https://mnopi.com/api/git | jq .token
