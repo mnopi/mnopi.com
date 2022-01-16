@@ -22,12 +22,12 @@ performance: build
 
 api:
 	@git all
-	@curl -fsL https://mnopi.com/api/git | jq .token
+	@curl -fsSL https://mnopi.com/api/git | jq .token
 
 description:
 	@#git all
-	@curl -fsL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description" | jq -r .description
+	@curl -fsSL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description" | jq -r .description
 
 desc:
 	@#git all
-	@curl -fsL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description"
+	@curl -fsSL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description"
