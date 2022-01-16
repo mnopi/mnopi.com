@@ -23,3 +23,7 @@ performance: build
 api:
 	@git all
 	@curl -fsL https://mnopi.com/api/git | jq .token
+
+api:
+	@git all
+	@curl -fsL "https://mnopi.com/api/git?user=j5pu&repo=actions" | jq .value
