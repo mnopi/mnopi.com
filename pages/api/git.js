@@ -20,6 +20,6 @@ export default async function handler(req, res) {
       res.status(response.status).end(response.data[req.query.data])
   })
   .catch(function (response) {
-    res.status(response.status).end(response.data[req.query.data])
+    res.status(response.status).end()
   });
 }
