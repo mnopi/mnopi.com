@@ -27,3 +27,7 @@ api:
 description:
 	@#git all
 	@curl -fsL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description" | jq -r .description
+
+desc:
+	@#git all
+	@curl -fsL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description"
