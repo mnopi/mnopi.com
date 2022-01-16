@@ -1,14 +1,18 @@
-// Extendable client for GitHub's REST & GraphQL APIs:
-// https://github.com/octokit/core.js
+// GitHub REST API client for JavaScript: https://github.com/octokit/rest.js
 // GitHub REST API Reference: https://docs.github.com/en/rest/reference
+// Full documentation: https://octokit.github.io/rest.js/v18
 
-const { Octokit } = require("@octokit/core");
+const { Octokit } = require("@octokit/rest");
 
 async function request(owner = process.env.VERCEL_GIT_REPO_OWNER, repo){
   const octokit = new Octokit({ auth: process.env.TOKEN });
-  return await octokit.request("GET /repos/{owner}/{repo}", {
-    owner: owner,
-    repo: repo,
+  octokit.rest.repos
+  .listForUser({
+    username: owner,
+    type: 'owner',
+  })
+  .then(({ data }) => {
+    // handle data
   });
 }
 
@@ -19,3 +23,4 @@ export default async function handler(req, res) {
   res.status(200).json({ value: `${req.query.owner}/${req.query.repo}`,
     description: response.data[req.query.data] })
 }
+// TODO: User, default values

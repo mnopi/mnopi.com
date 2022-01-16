@@ -14,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@octokit/core": "^3.5.1",
+    "@octokit/rest": "^18.12.0",
     "lighthouse": "^9.2.0",
     "next": "^11.0.1",
     "nextra": "^1.1.0",

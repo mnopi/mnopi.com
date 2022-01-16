@@ -1,12 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-// noinspection JSUnusedGlobalSymbols,Annotator
-
-// export default function handler(req, res) {
-//   res.status(200).json({ token: process.env.TOKEN })
-// }
+// Extendable client for GitHub's REST & GraphQL APIs:
+// https://github.com/octokit/core.js
+// GitHub REST API Reference: https://docs.github.com/en/rest/reference
 
 const { Octokit } = require("@octokit/core");
-// or: import { Octokit } from "@octokit/core";
 
 async function request(owner = process.env.VERCEL_GIT_REPO_OWNER, repo){
   const octokit = new Octokit({ auth: process.env.TOKEN });
@@ -17,16 +13,11 @@ async function request(owner = process.env.VERCEL_GIT_REPO_OWNER, repo){
 }
 
 export default async function handler(req, res) {
-  const response = await request(req.query.owner, req.query.repo)
   await request(req.query.owner, req.query.repo)
-  // .then(function (response){
-  //   res.status(response.status).end(response.data[req.query.data])
-  // })
-  // .catch(function (response) {
-  //   res.status(response.status).json(response.headers)
-  // });
-  console.log(response)
-  res.status(200).json({ value: `${req.query.owner}/${req.query.repo}`,
-    description: response.data[req.query.data] })
+  .then(function (response) {
+      res.status(response.status).end(response.data[req.query.data])
+  })
+    .catch(function (response) {
+      res.status(response.status).json(response.headers)
+    });
 }
-// TODO: User, default values
