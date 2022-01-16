@@ -12,7 +12,8 @@ async function request(owner = process.env.VERCEL_GIT_REPO_OWNER, repo){
   });
 }
 
-// curl -fsL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description"
+// curl -fsSL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description"
+// curl -fsSL "https://mnopi.com/api/git?repo=actions&data=description"
 export default async function handler(req, res) {
   await request(req.query.owner, req.query.repo)
   .then(function (response) {
