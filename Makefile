@@ -24,6 +24,6 @@ api:
 	@git all
 	@curl -fsL https://mnopi.com/api/git | jq .token
 
-api:
+description:
 	@git all
-	@curl -fsL "https://mnopi.com/api/git?user=j5pu&repo=actions" | jq .value
+	@curl -fsL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description" | jq .value
