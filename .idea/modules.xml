@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/mnopi.iml" filepath="$PROJECT_DIR$/.idea/mnopi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../update-homebrew-action/.idea/update-homebrew-action.iml" filepath="$PROJECT_DIR$/../update-homebrew-action/.idea/update-homebrew-action.iml" />
     </modules>
   </component>
 </project>
