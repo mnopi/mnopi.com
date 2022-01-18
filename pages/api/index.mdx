@@ -2,7 +2,7 @@
 
 ## [git](https://mnopi.com/api/git)
 
-| Field | Values[^1] | Index[^2]/Key | Description |
+| Field | Values[^1] | Index[^2] or Key | Description |
 |---|---|
 | [index](https://docs.github.com/en/rest/reference) | [repos](https://docs.github.com/en/rest/reference/repos#get-a-repository--code-samples), **[search](https://docs.github.com/en/rest/reference/search)**, [users](https://docs.github.com/en/rest/reference/users#get-a-user--code-samples) | N/A | Field from GitHub API |
 | **formula** | **0**, 1 | [repos](https://docs.github.com/en/rest/reference/repos#get-a-repository--code-samples) | Generate values for homebrew formula |
@@ -20,25 +20,26 @@
 | **tag** | **0**, 1 | [repos](https://docs.github.com/en/rest/reference/repos#get-a-repository--code-samples) | Latest tag |
 
 `curl -fsSL "https://mnopi.com/api/git?ref=<value>&owner=<value>"`
+
 [^1]: Possible values for field (default in bold).
 [^2]: [API reference](https://docs.github.com/en/rest/reference) *Index* or *Key* that the field applies.
 [^3]: Examples [keys](https://docs.github.com/en/rest/reference/repos#get-a-repository--code-samples)
   *id*: 1296269,
   *full_name*: "octocat/Hello-World",
-  *html_url*: "https://github.com/octocat/Hello-World",
+  *html_url*: `https://github.com/octocat/Hello-World`,
   *private*: "true" or "false",
-  *git_tags_url*: "https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}",
-  *git_url*: "git:github.com/octocat/Hello-World.git",
-  *releases_url*: "https://api.github.com/repos/octocat/Hello-World/releases{/id}",
-  *ssh_url*: "git@github.com:octocat/Hello-World.git",
-  *tags_url*: "https://api.github.com/repos/octocat/Hello-World/tags",
-  *clone_url*: "https://github.com/octocat/Hello-World.git",
-  *homepage*: "https://github.com",
+  *git_tags_url*: `https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}`,
+  *git_url*: `git:github.com/octocat/Hello-World.git`,
+  *releases_url*: `https://api.github.com/repos/octocat/Hello-World/releases{/id}`,
+  *ssh_url*: `git@github.com:octocat/Hello-World.git`,
+  *tags_url*: `https://api.github.com/repos/octocat/Hello-World/tags`,
+  *clone_url*: `https://github.com/octocat/Hello-World.git`,
+  *homepage*: `https://github.com`,
   *size*: 108,
   *default_branch*: "master",
   *visibility*: "public",
-  *license*: {"key": "mit", "name": "MIT License", "spdx_id": "MIT", ...}
-  *organization*: {"login": "octocat", "id": "1", ...}
+  *license*: "key": "mit", "name": "MIT License", "spdx_id": "MIT", ...
+  *organization*: "login": "octocat", "id": "1", ...
 
 ### [repos](https://mnopi.com/api/git?index=repos)
 
@@ -95,6 +96,3 @@ curl -fsSL "https://mnopi.com/api/git?index=search&q=cmd+user:j5pu"
 ```bash
 curl -fsSL "https://mnopi.com/api/git?index=search&q=^cmd+user:j5pu"
 ```
-
-// curl -fsSL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description"
-// curl -fsSL "https://mnopi.com/api/git?repo=actions&data=description"
