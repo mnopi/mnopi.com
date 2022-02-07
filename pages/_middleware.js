@@ -11,7 +11,7 @@
 //}
 // pages/_middleware.js
 
-export default function middleware (req, ev) {
+export function middleware (req, ev) {
   console.log('Edit and run at the edge!')
   return new Response({
     middelware: {
