@@ -75,5 +75,6 @@ export default function handler(request, response) {
             query: request.query
           }
         });
-   };
+    };
+  };
 }
