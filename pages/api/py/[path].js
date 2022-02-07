@@ -36,7 +36,7 @@ export default function handler(request, response) {
   if (request.query === {}) {
     response.send(dev.join('\n'));
   } else {
-    switch (req.query.index) {
+    switch (req.query.path) {
       case "ip":
         response.send(req.ip);
       case "download":
@@ -49,7 +49,7 @@ export default function handler(request, response) {
         if (res.protocol === 'https') {
           res.modified = true;
         }
-        res.send(res);
+        res.send(res.middelware);
       case "dir":
         let files = fs.readdirSync('/public')
         for (i = 0; i < fs.files.length; i++) {
@@ -71,7 +71,7 @@ export default function handler(request, response) {
           error: {
             code: 400,
             message: "Invalid path and/or query",
-            path: `/api/py/${query.path}`,
+            path: `/api/py/${req.query.path}`,
             query: request.query
           }
         });
