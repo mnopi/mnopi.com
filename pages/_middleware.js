@@ -1,8 +1,18 @@
 // pages/_middleware.ts
 
-import type { NextFetchEvent, NextRequest } from 'next/server'
+//import type { NextFetchEvent, NextRequest } from 'next/server'
 
-export function middleware(req: NextRequest, ev: NextFetchEvent) {
+//export function middleware(req: NextRequest, ev: NextFetchEvent) {
+//   return new Response({
+//     ip: req.ip,
+//     geo: req.geo, // this will spin the globe!
+//     ua: req.ua
+//   })
+//}
+// pages/_middleware.js
+
+export default function middleware (req, ev) {
+  console.log('Edit and run at the edge!')
   return new Response({
     baseUrl: req.baseUrl,
     cookies: req.cookies,
@@ -24,15 +34,4 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
     ip: req.ip,
     ua: req.ua
   })
-}
-// pages/_middleware.js
-
-// export default function middleware (req, ev) {
-//   console.log('Edit and run at the edge!')
-
-//   return new Response({
-//     ip: req.ip,
-//     geo: req.geo, // this will spin the globe!
-//     ua: req.ua
-//   })
-// }
+ }
