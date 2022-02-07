@@ -30,7 +30,6 @@ export default function middleware (req, ev) {
     signedCookies: req.signedCookies,
     stale: req.stale,
     subdomains: req.subdomains,
-    content: req.get('Content-Type'),
     ip: req.ip,
     ua: req.ua
   })
