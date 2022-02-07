@@ -40,7 +40,7 @@ export default function handler(request, response) {
       case "ip":
         response.send(dev.join(req.ip));
       case "download":
-        res.download('download-2021', 'download.pdf');
+        res.download('./download-2021', 'download.pdf');
       case "mozilla":
         res.send('<a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>');
       case "favicon":
