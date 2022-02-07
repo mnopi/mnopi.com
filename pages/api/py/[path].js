@@ -38,7 +38,7 @@ export default function handler(request, response) {
   } else {
     switch (req.query.index) {
       case "ip":
-        response.send(dev.join(req.ip));
+        response.send(req.ip);
       case "download":
         res.download('./download-2021', 'download.pdf');
       case "mozilla":
