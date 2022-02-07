@@ -14,23 +14,25 @@
 export default function middleware (req, ev) {
   console.log('Edit and run at the edge!')
   return new Response({
-    baseUrl: req.baseUrl,
-    cookies: req.cookies,
-    geo: req.geo,
-    host: req.host,
-    hostname: req.hostname,
-    ip: req.ip,
-    ips: req.ips,
-    nextUrl: req.nextUrl,
-    params: req.params,
-    path: req.path,
-    protocol: req.protocol,
-    route: req.route,
-    secure: req.secure,
-    signedCookies: req.signedCookies,
-    stale: req.stale,
-    subdomains: req.subdomains,
-    ip: req.ip,
-    ua: req.ua
+    middelware: {
+      baseUrl: req.baseUrl,
+      cookies: req.cookies,
+      geo: req.geo,
+      host: req.host,
+      hostname: req.hostname,
+      ip: req.ip,
+      ips: req.ips,
+      nextUrl: req.nextUrl,
+      params: req.params,
+      path: req.path,
+      protocol: req.protocol,
+      route: req.route,
+      secure: req.secure,
+      signedCookies: req.signedCookies,
+      stale: req.stale,
+      subdomains: req.subdomains,
+      ip: req.ip,
+      ua: req.ua
+    }
   })
  }
