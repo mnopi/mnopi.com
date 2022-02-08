@@ -37,6 +37,9 @@ export default function handler(req, res) {
     res.send(dev.join('\n'));
   } else {
     switch (req.query.path) {
+      case "req":
+        res.send(req);
+        break;
       case "ip":
         res.send(req.ip);
         break;
