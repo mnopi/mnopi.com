@@ -2,10 +2,8 @@
 
 export default function Home() {
   return (
-    <div className="container">
-      <main>
-        <p>build darling ipython pip-tools pytest</p>
-      </main>
-    </div>
+    <main>
+      <p>build darling ipython pip-tools pytest</p>
+    </main>
   )
 }
