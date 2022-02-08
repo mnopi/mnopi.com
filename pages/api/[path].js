@@ -1,36 +1,5 @@
 // [py].js
 
-// /api/py
-
-// $ curl "https://mnopi.com/api/py"
-// ..>This page could not be found<...type="application/json"
-// $ curl -f "https://mnopi.com/api/py"                                                         22 x 
-// curl: (22) The requested URL returned error: 404
-// $ curl -X GET -H "Accept: application/json" "https://mnopi.com/api/py"
-// ..>This page could not be found<...type="application/json"
-// $ curl -f -X GET -H "Accept: application/json" "https://mnopi.com/api/py"                    22 x 
-// curl: (22) The requested URL returned error: 404
-
-// Adding: /api/py/index.mdx -> index.mdx and [path].js incompatible, but also /api/git.js with /api/index.mdx
-// $ curl -X GET -H "Accept: application/json" "https://mnopi.com/api/py"
-// {"error": {"code": "504", "message": "An error occurred with your deployment"}}
-// An error occurred with your deployment
-// FUNCTION_INVOCATION_TIMEOUT
-
-// $ curl "https://mnopi.com/api/py/test"
-// {"path":"test"}
-// $ curl -f "https://mnopi.com/api/py/test"                                                    22 x 
-// curl: (22) The requested URL returned error: 400
-// $ curl -X GET -H "Accept: application/json" "https://mnopi.com/api/py/test" 
-// {"path":"test"}
-// $ curl -f -X GET -H "Accept: application/json" "https://mnopi.com/api/py/test"               22 x 
-// curl: (22) The requested URL returned error: 400
-// $ curl -X GET -H "Accept: application/json" "https://mnopi.com/api/py/test?param=1&empty"    22 x
-// {"empty":"","param":"1","path":"test"}
-
-// curl -fsSL "https://mnopi.com/api/py/dev"
-// curl -fsSL "https://mnopi.com/api/py/test"
-
 export default function handler(req, res) {
   const dev = ["build", "darling", "ipython", "pip-tools", "pytest"];
   if (req.query === {}) {

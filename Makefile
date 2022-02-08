@@ -31,3 +31,8 @@ description:
 desc:
 	@#git all
 	@curl -fsSL "https://mnopi.com/api/git?owner=j5pu&repo=actions&data=description"
+
+tools:
+	@curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+	@sudo apt-get install -y nodejs
+	@sudo npm install --package-lock-only --force --global npx yarn
