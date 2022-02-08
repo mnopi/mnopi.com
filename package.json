@@ -1,39 +1,13 @@
 {
-  "name": "mnopi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "dev": "next",
-    "lint": "next lint",
-    "start": "next start",
+    "dev": "next dev",
     "build": "next build",
-    "performance": "lighthouse --output-path=./_lighthouse.html --view --save-assets https://mnopi.com"
+    "start": "next start"
   },
-  "author": "José",
-  "license": "MIT",
   "dependencies": {
-    "@octokit/core": "^3.5.1",
-    "@octokit/rest": "^18.12.0",
-    "lighthouse": "^9.2.0",
-    "next": "^11.0.1",
-    "nextra": "^1.1.0",
-    "nextra-theme-blog": "^0.1.6",
-    "nextra-theme-docs": "^1.2.6",
-    "prism-react-renderer": "^1.2.1",
-    "prismjs": "^1.26.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "shaurl": "^1.1.0",
-    "swr": "^1.1.2"
-  },
-  "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0",
-    "prettier": "^2.0.5"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }
