@@ -2,8 +2,6 @@
 
 export default function Home() {
   return (
-    <main>
-      <p>build darling ipython pip-tools pytest</p>
-    </main>
+    <p>build darling ipython pip-tools pytest</p>
   )
 }
