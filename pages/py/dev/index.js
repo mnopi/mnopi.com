@@ -1,3 +1,3 @@
 export default function Home() {
-  return ('build darling ipython pip-tools pytest')
+  return <div>build darling ipython pip-tools pytest</div>
 }
