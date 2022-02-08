@@ -1,0 +1,9 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "favorites.resources": [
+        {
+            "filePath": "pages/examples",
+            "group": "Default"
+        }
+    ]
+}
