@@ -39,25 +39,30 @@ export default function handler(req, res) {
     switch (req.query.path) {
       case "ip":
         res.send(req.ip);
+        break;
       case "download":
         res.download('./download-2021', 'download.pdf');
+        break;
       case "mozilla":
         res.send('<a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>');
+        break;
       case "favicon":
         res.download('/favicon-32x32.png', 'favicon.pdf');
+        break;
       case "modify":
         if (res.protocol === 'https') {
           res.modified = true;
         }
         res.send(res.middelware);
+        break;
       case "dir":
         let files = fs.readdirSync('/public')
         for (i = 0; i < fs.files.length; i++) {
           const basename = path.basename(file[i]);
           file[i] = `'<a href="https://www.mnopi.com/${basename}/">${basename}</a>`;
-          response.send(file.join('\n'));
         }
-        readdirSync
+        response.send(file.join('\n'));
+        break;
       case "sendfile":
         res.sendFile('/favicon-32x32.png', {
           root: path.join(__dirname, 'public'),
@@ -66,6 +71,7 @@ export default function handler(req, res) {
             'x-sent': true
           }          
         });
+        break;
       default:
         res.status(400).send({
           error: {
