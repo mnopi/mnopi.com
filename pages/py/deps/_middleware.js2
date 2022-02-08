@@ -1,9 +1,5 @@
 // pages/_middleware.js
 
 export default function middleware (req, ev) {
-  return new Response({
-    ip: req.ip,
-    geo: req.geo, // this will spin the globe!
-    ua: req.ua
-  })
+  return new Response('hola')
 }
