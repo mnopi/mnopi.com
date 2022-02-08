@@ -1,6 +1,6 @@
 // pages/_middleware.js
 
-export function middleware(req: NextRequest, ev: NextFetchEvent) {
+export default function middleware (req, ev) {
   return new Response({
     ip: req.ip,
     geo: req.geo, // this will spin the globe!
