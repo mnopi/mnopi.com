@@ -31,14 +31,14 @@
 // curl -fsSL "https://mnopi.com/api/py/dev"
 // curl -fsSL "https://mnopi.com/api/py/test"
 
-export default function handler(request, response) {
+export default function handler(req, res) {
   const dev = ["build", "darling", "ipython", "pip-tools", "pytest"];
-  if (request.query === {}) {
-    response.send(dev.join('\n'));
+  if (req.query === {}) {
+    res.send(dev.join('\n'));
   } else {
     switch (req.query.path) {
       case "ip":
-        response.send(req.ip);
+        res.send(req.ip);
       case "download":
         res.download('./download-2021', 'download.pdf');
       case "mozilla":
@@ -67,12 +67,12 @@ export default function handler(request, response) {
           }          
         });
       default:
-        response.status(400).send({
+        res.status(400).send({
           error: {
             code: 400,
             message: "Invalid path and/or query",
             path: `/api/py/${req.query.path}`,
-            query: request.query
+            query: req.query
           }
         });
     };
