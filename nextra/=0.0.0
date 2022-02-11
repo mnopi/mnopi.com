@@ -1,0 +1,65 @@
+Progress: resolved 0, reused 1, downloaded 0, added 0
+ WARN  deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+ WARN  deprecated intl-messageformat-parser@1.8.1: We've written a new parser that's 6x faster and is backwards compatible. Please use @formatjs/icu-messageformat-parser
+ WARN  deprecated uuid@3.3.2: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+ WARN  deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+Progress: resolved 611, reused 607, downloaded 0, added 0
+Packages: +6 -2
+++++++--
+Relinking /home/j5pu/mnopi/nextra/node_modules/.pnpm/@types+prop-types@15.7.4/node_modules/@types/prop-types from the store
+Relinking /home/j5pu/mnopi/nextra/node_modules/.pnpm/@types+scheduler@0.16.2/node_modules/@types/scheduler from the store
+Relinking /home/j5pu/mnopi/nextra/node_modules/.pnpm/@types+react@17.0.39/node_modules/@types/react from the store
+Relinking /home/j5pu/mnopi/nextra/node_modules/.pnpm/csstype@3.0.10/node_modules/csstype from the store
+Relinking /home/j5pu/mnopi/nextra/node_modules/.pnpm/react-innertext@1.1.5_a0c521d4794c7ad97f5f4c1c4a7d5818/node_modules/react-innertext from the store
+Relinking /home/j5pu/mnopi/nextra/node_modules/.pnpm/nextra-theme-docs@1.2.6_7a0060437ce38d215e329a144b6c6f50/node_modules/nextra-theme-docs from the store
+Progress: resolved 824, reused 820, downloaded 0, added 6, done
+
+dependencies:
+- nextra-theme-docs 1.2.6
++ nextra-theme-docs 1.2.6
+
+devDependencies:
++ @types/react 17.0.39
+
+ WARN  Issues with peer dependencies found
+.
+├─┬ eslint-config-next
+│ ├── ✕ missing peer typescript@>=3.3.1
+│ └─┬ @typescript-eslint/parser
+│   ├── ✕ missing peer typescript@"*"
+│   └─┬ @typescript-eslint/typescript-estree
+│     ├── ✕ missing peer typescript@"*"
+│     └─┬ tsutils
+│       └── ✕ missing peer typescript@">=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta"
+├─┬ ts-pnp
+│ └── ✕ missing peer typescript@"*"
+├─┬ next
+│ ├─┬ @next/react-refresh-utils
+│ │ └── ✕ missing peer webpack@"^4 || ^5"
+│ └─┬ styled-jsx
+│   ├── ✕ missing peer @babel/core@"*"
+│   └─┬ @babel/plugin-syntax-jsx
+│     └── ✕ missing peer @babel/core@^7.0.0-0
+├─┬ nextra
+│ └─┬ @mdx-js/loader
+│   └── ✕ missing peer webpack@>=4
+├─┬ nextra-theme-blog
+│ └─┬ @tailwindcss/typography
+│   └── ✕ missing peer tailwindcss@^1.5.0
+└─┬ nextra-theme-docs
+  ├─┬ @reach/skip-nav
+  │ ├── ✕ unmet peer react@^16.8.0: found 17.0.2
+  │ ├── ✕ unmet peer react-dom@^16.8.0: found 17.0.2
+  │ └─┬ @reach/utils
+  │   ├── ✕ unmet peer react@^16.8.0: found 17.0.2
+  │   └── ✕ unmet peer react-dom@^16.8.0: found 17.0.2
+  └─┬ next-themes
+    ├── ✕ unmet peer react@^16.13.1: found 17.0.2
+    ├── ✕ unmet peer react-dom@^16.13.1: found 17.0.2
+    └── ✕ unmet peer next@^9.5.5: found 11.1.4
+Peer dependencies that should be installed:
+  @babel/core@">=7.0.0 <8.0.0"
+  tailwindcss@^1.5.0
+  typescript@>=3.3.1
+  webpack@">=4.0.0 <5.0.0 || >=5.0.0 <6.0.0"
+
