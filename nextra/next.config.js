@@ -9,7 +9,7 @@ module.exports = withNextra({
     return [
     {
       source: '/sudoers',
-      destination: 'https://raw.githubusercontent.com/j5pu/sudoers/main/sudoers',
+      destination: 'https://raw.githubusercontent.com/j5pu/sudoers/main/install',
       permanent: true,
     },
     ]
