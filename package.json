@@ -36,5 +36,6 @@
     "semi": false,
     "singleQuote": true
   },
+  "engines" : { "pnpm" : "^6.30.0" },
   "packageManager": "pnpm@6.30.0"
 }
