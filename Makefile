@@ -4,6 +4,8 @@ install:
 	@yarn install
 
 dev:
+	@pkill -9 -q -f "npm run dev" 2>/dev/null || true
+	@sleep 2
 	@npx browserslist@latest --update-db -y --quiet
 	@npm run dev
 

@@ -1,6 +1,5 @@
 {
   "index": "Introduction",
   "repositories": "Repositories",
-  "repos": "Repos",
-  "api": "API"
+  "http": "API"
 }
